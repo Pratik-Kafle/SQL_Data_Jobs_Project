@@ -27,7 +27,7 @@ GROUP BY
     skills.skill_id,
     skills
 HAVING
-    COUNT(skill_to_job.skill_id)>20
+    COUNT(skill_to_job.skill_id)>10
 ORDER BY
     avg_salary DESC,
     demand_count DESC

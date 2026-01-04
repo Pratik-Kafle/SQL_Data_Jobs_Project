@@ -8,7 +8,6 @@ Question: What are the top skills based on salary?
 
 SELECT
     skills,
-    COUNT(*) AS posting_count,
     ROUND(AVG(salary_year_avg),0) AS avg_salary
 FROM
     job_postings_fact AS jobs
@@ -24,6 +23,6 @@ GROUP BY
 HAVING
     COUNT(*)>10
 ORDER BY
-    avg_salary DESC,
-    posting_count DESC
-LIMIT 25;
+    avg_salary DESC
+LIMIT 25
+;
