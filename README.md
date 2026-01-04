@@ -23,6 +23,7 @@ For my deep dive into the data analyst job market, I harnessed the power of seve
 To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on job posted Remotely. This query highlights the high paying opportunities in the field.
 ```sql
 SELECT
+    job_title_short,
 	job_title,
 	job_location,
 	job_schedule_type,
@@ -39,6 +40,7 @@ WHERE
     salary_year_avg IS NOT NULL
 ORDER BY salary_year_avg DESC
 LIMIT 10
+;
 ;
 ```
 Here's the breakdown of the top data analyst jobs in 2023:
