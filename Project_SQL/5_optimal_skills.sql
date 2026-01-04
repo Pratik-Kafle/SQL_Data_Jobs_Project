@@ -42,9 +42,9 @@ WITH skill_demand AS
         COUNT(skill_to_job.job_id) AS demand_count
     FROM
         skills_job_dim AS skill_to_job
-    LEFT JOIN skills_dim AS skills
+    INNER JOIN skills_dim AS skills
         ON skill_to_job.skill_id = skills.skill_id
-    LEFT JOIN job_postings_fact AS jobs
+    INNER JOIN job_postings_fact AS jobs
         ON skill_to_job.job_id = jobs.job_id
     WHERE
         salary_year_avg IS NOT NULL
@@ -81,7 +81,7 @@ FROM
     average_salary
 INNER JOIN skill_demand
     ON average_salary.skill_id = skill_demand.skill_id
-WHERE demand_count>20
+WHERE demand_count>10
 ORDER BY
     avg_salary DESC,
     demand_count DESC

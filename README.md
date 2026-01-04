@@ -20,7 +20,7 @@ For my deep dive into the data analyst job market, I harnessed the power of seve
 - **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis, ensuring collaboration and project tracking.
 
 ### 1. Top Paying Data Analyst Jobs
-To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on job posted Remotely. This query highlights the high paying opportunities in the field.
+To identify the highest-paying roles, I filtered data analyst positions by average yearly salary and location, focusing on job posted in India. This query highlights the high paying opportunities in the field.
 ```sql
 SELECT
     job_title_short,
@@ -48,7 +48,7 @@ Here's the breakdown of the top data analyst jobs in 2023:
 - **Diverse Employers:** Companies like Mantys, Eagle Genomics Ltd, and Bosch Group are among those offering high salaries, showing a broad interest across different industries.
 - **Job Title Variety:** There's a high diversity in job titles, from Data Analyst to Data Architect and Sr. Enterprise Data Analyst, reflecting varied roles and specializations within data analytics.
 
-![alt text](1_Job_salary.png)
+![Top Paying Roles](/Images/1_Job_salary.png)
 *Bar graph visualizing the salary for the top 10 salaries for data analysts; Copilot generated this graph from my SQL query results*
 
 ### 2. Skills for Top Paying Jobs
@@ -89,8 +89,9 @@ ORDER BY
 Here's the breakdown of the most demanded skills for the top 10 highest paying data analyst jobs in 2023:
 - **SQL** is leading with a bold count of 5.
 - **Power BI** follows closely with a bold count of 4.
-Other skills like **Python**, **aws**, **Pandas**, and **Excel** show varying degrees of demand.
-![alt text](2_top_paying_skills.jpeg)
+- Other skills like **Python**, **aws**, **Pandas**, and **Excel** show varying degrees of demand.
+![Top Paying Skills](/Images/2_top_paying_skills.jpeg)
+*Bar graph visualizing the count of skills for the top 10 paying jobs for data analysts; Copilot generated this graph from my SQL query results*
 
 ### 3. In-Demand Skills for Data Analysts
 
@@ -201,8 +202,8 @@ ORDER BY
     demand_count DESC
 ;
 ```
-| Skills     | Demand Count | Average Salary ($) |
-|------------|------------|--------------|-------------------:|
+| Skills     | Demand Count | Average Salary ($)|
+|------------|--------------|-------------------:|
 | go         | 27           |            115,320 |
 | confluence | 11           |            114,210 |
 | hadoop     | 22           |            113,193 |

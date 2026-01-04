@@ -11,9 +11,9 @@ SELECT
     COUNT(skill_to_job.skill_id) AS demand_count
 FROM
     skills_job_dim AS skill_to_job
-INNER JOIN skills_dim AS skills
+LEFT JOIN skills_dim AS skills
     ON skill_to_job.skill_id = skills.skill_id
-INNER JOIN job_postings_fact AS jobs
+LEFT JOIN job_postings_fact AS jobs
     ON skill_to_job.job_id = jobs.job_id
 WHERE
     job_title_short='Data Analyst' AND
