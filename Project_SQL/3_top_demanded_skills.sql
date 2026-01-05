@@ -1,7 +1,6 @@
 /*
 Question: What are the most in-demand skills for data analysts?
 - Identify the top 5 in-demand skills for a data analyst.
-- Focus on roles availabe in India
 - Why? Retrieves the top 5 skills with the highest demand in the job market, 
     providing insights into the most valuable skills for job seekers.
 */
@@ -16,8 +15,7 @@ LEFT JOIN skills_dim AS skills
 LEFT JOIN job_postings_fact AS jobs
     ON skill_to_job.job_id = jobs.job_id
 WHERE
-    job_title_short='Data Analyst' AND
-    job_country = 'India'
+    job_title_short='Data Analyst'
 GROUP BY
     skills
 ORDER BY
